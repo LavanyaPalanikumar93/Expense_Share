@@ -71,6 +71,8 @@ movie → Entertainment
   "paidBy": 1,
   "participants": [1, 2, 3]
 }
+
+
 🗄️ Setup Instructions
 1️⃣ Clone the repository
 git clone https://github.com/your-username/expense-share.git
