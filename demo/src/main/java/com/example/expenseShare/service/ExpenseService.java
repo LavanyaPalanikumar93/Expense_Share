@@ -31,8 +31,12 @@ public class ExpenseService {
         expense.setPaidBy(payer);
         expenseRepo.save(expense);
 
-        double share=amount/participants.size();
+        double share=amount/(participants.size()-1);
         for(Long userId: participants){
+            if(userId.equals(paidById)){
+                continue;
+            }
+
             User A = userRepo.findById(userId).orElseThrow();
             ExpenseShare es=new ExpenseShare();
             es.setExpense(expense);
