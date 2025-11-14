@@ -46,3 +46,57 @@ build/
 application-local.properties
 application-dev.properties
 application-prod.properties
+# =====================
+# IntelliJ IDEA
+# =====================
+.idea/*
+!.idea/codeStyles/
+!.idea/inspectionProfiles/
+
+
+# =====================
+# Build directories
+# =====================
+
+out/
+
+# =====================
+# Maven / Gradle
+# =====================
+/.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+.gradle/
+*.class
+*.jar
+*.war
+*.ear
+
+# =====================
+# Logs
+# =====================
+*.log
+logs/
+*.out
+
+# =====================
+# OS files
+# =====================
+.DS_Store
+Thumbs.db
+
+
+
+# =====================
+# Node / frontend if present
+# =====================
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# =====================
+# Temporary files
+# =====================
+*.tmp
+*.swp
+*.lock
