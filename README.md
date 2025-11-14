@@ -31,9 +31,9 @@ Postman / Swagger for API testing
 
 src/
  ├── controller
- ├── service
- ├── repository
  ├── model
+ ├── repository
+ ├── service
  └── ExpenseShareApplication.java
  
 🔗 API Endpoints
