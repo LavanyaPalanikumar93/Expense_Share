@@ -74,6 +74,7 @@ movie → Entertainment
 
 
 🗄️ Setup Instructions
+
 1️⃣ Clone the repository
 git clone https://github.com/your-username/expense-share.git
 
@@ -86,9 +87,9 @@ spring.jpa.hibernate.ddl-auto=update
 3️⃣ Run the application
 mvn spring-boot:run
 
-✨ Future Enhancements
-Login + JWT Authentication
-User Groups
-Smart AI categorization (NLP)
-Monthly reports
+✨ Future Enhancements:
+Login + JWT Authentication,
+User Groups,
+Smart AI categorization (NLP),
+Monthly reports,
 Export to Excel / PDF
