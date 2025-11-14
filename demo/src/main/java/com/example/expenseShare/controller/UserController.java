@@ -1,4 +1,4 @@
-package com.example.expenseShare.RestController;
+package com.example.expenseShare.controller;
 
 import com.example.expenseShare.model.User;
 import com.example.expenseShare.service.UserService;

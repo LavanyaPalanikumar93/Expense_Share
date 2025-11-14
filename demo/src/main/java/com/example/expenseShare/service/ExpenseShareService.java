@@ -1,8 +1,8 @@
 package com.example.expenseShare.service;
 
-import com.example.expenseShare.Repository.ExpenseRepository;
-import com.example.expenseShare.Repository.ExpenseShareRepository;
-import com.example.expenseShare.Repository.UserRepository;
+import com.example.expenseShare.repository.ExpenseRepository;
+import com.example.expenseShare.repository.ExpenseShareRepository;
+import com.example.expenseShare.repository.UserRepository;
 import com.example.expenseShare.model.Expense;
 import com.example.expenseShare.model.ExpenseShare;
 import com.example.expenseShare.model.User;
@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ExpenseShareService {

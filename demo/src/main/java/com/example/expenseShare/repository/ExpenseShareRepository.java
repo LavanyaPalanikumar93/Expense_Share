@@ -1,4 +1,4 @@
-package com.example.expenseShare.Repository;
+package com.example.expenseShare.repository;
 
 import com.example.expenseShare.model.Expense;
 import com.example.expenseShare.model.ExpenseShare;

@@ -1,4 +1,4 @@
-package com.example.expenseShare.Repository;
+package com.example.expenseShare.repository;
 
 import com.example.expenseShare.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;

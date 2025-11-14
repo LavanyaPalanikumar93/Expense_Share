@@ -1,4 +1,4 @@
-package com.example.expenseShare.Utility;
+package com.example.expenseShare.service;
 
 
 import org.springframework.stereotype.Component;
