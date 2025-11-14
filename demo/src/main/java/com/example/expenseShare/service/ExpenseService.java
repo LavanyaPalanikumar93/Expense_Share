@@ -3,6 +3,7 @@ package com.example.expenseShare.service;
 import com.example.expenseShare.Repository.ExpenseRepository;
 import com.example.expenseShare.Repository.ExpenseShareRepository;
 import com.example.expenseShare.Repository.UserRepository;
+import com.example.expenseShare.Utility.CategoryPredictor;
 import com.example.expenseShare.model.Expense;
 import com.example.expenseShare.model.ExpenseShare;
 import com.example.expenseShare.model.User;
@@ -19,6 +20,8 @@ public class ExpenseService {
     private ExpenseRepository expenseRepo;
     @Autowired
     private ExpenseShareRepository shareRepo;
+    @Autowired
+    private CategoryPredictor categoryPredictor;
 
 
     public Expense addExpense(Long paidById, String description, double amount, List<Long> participants){
@@ -30,8 +33,16 @@ public class ExpenseService {
         expense.setAmount(amount);
         expense.setPaidBy(payer);
         expenseRepo.save(expense);
+        expense.setCategory(categoryPredictor.predictCategory(description));
 
-        double share=amount/(participants.size()-1);
+        expenseRepo.save(expense);
+
+
+        int oweCount = (int) participants.stream()
+                .filter(id -> !id.equals(paidById))
+                .count();
+
+        double share = amount / oweCount;
         for(Long userId: participants){
             if(userId.equals(paidById)){
                 continue;

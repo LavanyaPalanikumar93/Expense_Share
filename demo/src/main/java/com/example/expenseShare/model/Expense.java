@@ -12,7 +12,15 @@ public class Expense {
     private String description;
     @Column(name="Expense")
     private double amount ;
+    private String category;
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     @ManyToOne
     private User paidBy;
