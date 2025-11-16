@@ -38,24 +38,27 @@ src/
  
 🔗 API Endpoints
 👤 User APIs
-| Method | Endpoint     | Description   |
-| ------ | ------------ | ------------- |
-| POST   | `/api/users` | Create a user |
-| GET    | `/api/users` | Get all users |
+| Method | Endpoint         | Description   |
+| ------ | -----------------| ------------- |
+| POST   | `/api/users/add` | Create a user |
+| GET    | `/api/users/{id}`| Get user by id|
+| GET    | `/api/users/all` | Get all users |
 
 💸 Expense APIs
 | Method | Endpoint             | Description       |
 | ------ | -------------------- | ----------------- |
-| POST   | `/api/expenses`      | Create an expense |
-| GET    | `/api/expenses`      | Get all expenses  |
+| POST   | `/api/expenses/add`  | Create an expense |
 | GET    | `/api/expenses/{id}` | Get expense by ID |
+| GET    | `/api/expenses/all`  | Get all expenses  |
 
 🧮 Expense Share APIs
 | Method | Endpoint                   | Description                  |
 | ------ | -------------------------- | ---------------------------- |
-| GET    | `/api/share/{userId}/owed` | How much others owe TO user  |
-| GET    | `/api/share/{userId}/owes` | How much user OWES to others |
-| GET    | `/api/share/summary`       | All balances                 |
+| GET    | `/api/expenseShare/user/{userId}/total-owed`         | Get total amount a user owes  |
+| GET    | `/api/expenseShare/user/{userId}`                    | Get all shares for a specific user |
+| GET    | `/api/expenseShare/all`                              | Get all expense shares             |
+| GET    | `/api/expenseShare/expense/{expenseId}`              | Get all shares for a specific expense|
+| GET    | `/api/expenseShare/expense/{expenseId}/total-owed`   | Get total amount owed for a specific expense|
 
 🤖 AI Category Auto-Detection
 Expenses are auto-categorized based on keywords:
